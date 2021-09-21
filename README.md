@@ -3,11 +3,11 @@
 ## 🔖&nbsp; Sobre
 O projeto JacyCrypts nasceu para ser uma solução para o esquema abaixo:
 
-> "O emissor e o destinatário conhecem >um valor secreto chamado S. O emissor concatena a mensagem e > o valor secreto, calcula um hash, concatena a mensagem e o valor de hash, encripta usando 
+> "O emissor e o destinatário conhecem um valor secreto chamado S. O emissor concatena a mensagem e o valor secreto, calcula um hash, concatena a mensagem e o valor de hash, encripta usando 
 > criptografia simétrica e envia o resultado para o destinatário. O destinatário decripta os dados 
 > recebidos, concatena a mensagem e o valor secreto, gera o valor de hash e compara com o valor de 
 > hash recebido. Novamente, esse mecanismo não garante confidencialidade."
-> Ela utiliza uma hash MD5/SHA256 e a criptografia simetrica 3DES.
+Ela utiliza uma hash MD5/SHA256 e a criptografia simetrica 3DES.
 
 ## 🚀 Features
 - [x] Hash MD5
