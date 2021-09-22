@@ -12,8 +12,8 @@ Ela utiliza uma hash MD5/SHA256 e a criptografia simetrica 3DES.
 
 ## 🚀 Features
 - [x] Hash MD5
-- [ ] Hash SHA256
-- [x] Criptografia Simetrica DES3
+- [x] Hash SHA256
+- [x] Criptografia Simetrica 3DES
 
 ## 🗂 Como baixar o projeto
 ```bash
@@ -34,7 +34,8 @@ Ela utiliza uma hash MD5/SHA256 e a criptografia simetrica 3DES.
     from jacycrypts import JacyCrypt
 
     # Instanciar objeto com um valor secreto
-    jacycrypt = JacyCrypt('valor_secreto')
+    # Por padrão, type_hash utiliza a hash MD5
+    jacycrypt = JacyCrypt('valor_secreto', type_hash = 'sha256')
 
     # Encriptar mensagem
     mensagem_encriptada = jacycrypt.encrypt('mensagem_original')
@@ -46,6 +47,7 @@ Ela utiliza uma hash MD5/SHA256 e a criptografia simetrica 3DES.
     from jacycrypts import JacyCrypt
 
     # Instanciar objeto com um valor secreto
+    # Por padrão, type_hash utiliza a hash MD5
     jacycrypt = JacyCrypt('valor_secreto')
 
     # Decriptar mensagem
@@ -53,8 +55,7 @@ Ela utiliza uma hash MD5/SHA256 e a criptografia simetrica 3DES.
     print('Mensagem decriptada:', mensagem_decriptada)
 
     # Verificando se a hash da mensagem foi alterada
-    hash_new = jacycrypt.gerar_hash(mensagem_decriptada)
-    print('As hashs são iguais?', hash_new == hash)
+    print('As hashs são iguais?', jacycrypt.verify_hash(mensagem_decriptada, hash))
     ```
 
 ## Desenvolvido por
