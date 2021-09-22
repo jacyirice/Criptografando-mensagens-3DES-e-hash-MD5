@@ -10,6 +10,13 @@ O projeto JacyCrypts nasceu para ser uma solução para o esquema abaixo:
 
 Ela utiliza uma hash MD5/SHA256 e a criptografia simetrica 3DES.
 
+## 🛠 Tecnologias
+
+As seguintes ferramentas foram usadas na construção do projeto:
+- [Python](https://python.org/)
+- [HashLib](https://docs.python.org/3/library/hashlib.html)
+- [Crypto](https://pycryptodome.readthedocs.io/)
+
 ## 🚀 Features
 - [x] Hash MD5
 - [x] Hash SHA256
