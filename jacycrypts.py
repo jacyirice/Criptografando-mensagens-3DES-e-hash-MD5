@@ -14,7 +14,7 @@ class JacyCrypt:
         type_hash = type_hash.upper()
         self.valor_secreto = valor_secreto
         self.type_hash = self.HASHS[type_hash]
-        self.key = self.generate_key(valor_secreto, type_hash)
+        self.key = self.generate_key(valor_secreto)
 
     def encrypt(self, mensagem):
         hash = self.generate_hash(mensagem)
@@ -39,7 +39,7 @@ class JacyCrypt:
         hash = self.type_hash['f'](mensagem).hexdigest()
         return hash
 
-    def generate_key(self, valor, type_hash):
+    def generate_key(self, valor):
         hash = self.type_hash['f'](valor.encode()).digest()[:24]
         return hash
 
